@@ -21,7 +21,7 @@ import Topbar from "@/components/overall/topbar.vue";
 <style scoped>
 .overall {
   background-color: #1D232A;
-  width: 1440px;
+  width: 100vw;
   height: 100vh;
 
   position: relative;
@@ -29,7 +29,7 @@ import Topbar from "@/components/overall/topbar.vue";
 }
 
 .sidebar{
-  width: 204px;
+  width: 13%;
   height: 100vh;
 
   position: absolute;
@@ -38,7 +38,7 @@ import Topbar from "@/components/overall/topbar.vue";
 }
 
 .topbar {
-  width: 1236px;
+  width: 87%;
   height: 80px;
 
   position: absolute;

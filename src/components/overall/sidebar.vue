@@ -1,5 +1,6 @@
 <script setup>
 import {ref} from "vue";
+import ListContent from "@/components/overall/sidebar/listContent.vue";
 
 const paths = ref(['index', 'article', 'community', 'profile'])
 </script>
@@ -10,8 +11,7 @@ const paths = ref(['index', 'article', 'community', 'profile'])
 
     <div class="list">
       <div v-for="path in paths" class="content">
-        <img src="../../assets/icons/house.svg" alt="icon">
-        <div>{{path}}</div>
+        <list-content :path="path"></list-content>
       </div>
     </div>
   </div>
