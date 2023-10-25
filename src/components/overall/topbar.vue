@@ -1,28 +1,26 @@
 <script setup>
 
+const props = defineProps(['name']);
+
 </script>
 
 <template>
   <div class="top">
-    <div class="pagName">首页</div>
-    <div class="content">
-        <div class="uer">
-          <img src="../../assets/avatars/head.png" alt="avatar">
-          <div class="username">maifuwa</div>
-        </div>
-        <i>
-          <img src="../../assets/icons/group.svg" alt="message">
-        </i>
+    <h2>{{props.name}}</h2>
+    <div class="userInfo">
+      <div class="user">
+        <img src="../../assets/avatars/head.png" alt="header">
+        maifuwa
       </div>
+      <img src="../../assets/icons/message.svg" alt="message">
+    </div>
   </div>
 </template>
 
 <style scoped>
   .top{
     width: 100%;
-    height: 100%;
-
-    color: white;
+    height: 8%;
 
     display: flex;
     justify-content: space-between;
@@ -31,33 +29,29 @@
     padding: 0 60px;
 
     border-bottom: 2px #15191C solid;
-
-    .pagName {
+    h2 {
       font-size: 30px;
       font-weight: bold;
+
     }
-
-    .content {
+    .userInfo {
+      width: 15%;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      .uer {
-        width: 120px;
-        cursor: pointer;
 
-        display: flex;
-        align-items: center;
-        img {
-          width: 32px;
-          height: 32px;
-
-          margin-right: 10px;
-        }
+      img {
+        margin-left: 15%;
+        width: 30%;
       }
-      i {
-        width: 100px;
-        text-align: center;
-        border-left: 1px white solid;
+
+      .user {
+        font-size: 18px;
+        border-right: 1px white solid;
+        img {
+          margin-right: 4%;
+          vertical-align: middle;
+          width: 18%;
+        }
       }
     }
   }
