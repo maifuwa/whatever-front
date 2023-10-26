@@ -10,7 +10,7 @@ let articles = ref([
     "release": "2023/10/26"
   },
   {
-    "title": "这也是一篇测试文章",
+    "title": "这也是测试文章",
     "author": "测试2",
     "image": "src/assets/images/article/article2.svg",
     "release": "2023/10/26"
@@ -37,5 +37,36 @@ let articles = ref([
 </template>
 
 <style scoped lang="scss">
+.article {
+  margin-right: 2%;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-radius: 5%;
+  background-color: #2C343A;
+  img {
+    width: 100%;
+  }
+  .introduction {
+    display: flex;
+    flex-direction: column;
+
+    padding: 5%;
+    .author {
+      font-size: 18px;
+      color: #95999C;
+    }
+    .title {
+      font-size: 28px;
+      margin-top: 5%;
+      margin-bottom: 10%;
+    }
+    .time {
+      font-size: 14px;
+      color: #95999C;
+    }
+  }
+}
 </style>

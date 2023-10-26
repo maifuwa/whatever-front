@@ -21,6 +21,8 @@ import Topbar from "@/components/overall/topbar.vue";
   width: 100vw;
   height: 100vh;
 
+  overflow: auto;
+
   display: flex;
   justify-content: space-between;
 
@@ -29,6 +31,8 @@ import Topbar from "@/components/overall/topbar.vue";
   .side {
     flex: 1;
     height: 100%;
+
+
   }
   .content {
     flex: 9;

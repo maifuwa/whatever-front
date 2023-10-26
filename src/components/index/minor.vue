@@ -7,7 +7,7 @@ import ArticleHorizontal from "@/components/index/minor/articleHorizontal.vue";
   <div class="minor">
     <h3>文章推荐</h3>
     <div class="articles">
-      <article-horizontal></article-horizontal>
+      <article-horizontal />
     </div>
   </div>
 </template>
@@ -15,7 +15,16 @@ import ArticleHorizontal from "@/components/index/minor/articleHorizontal.vue";
 <style scoped lang="scss">
 .minor {
   width: 100%;
-  height: 100%;
 
+  margin-bottom: 4%;
+  h3 {
+    font-size: 20px;
+    margin-bottom: 1%;
+  }
+
+  .articles {
+    display: flex;
+    align-items: center;
+  }
 }
 </style>

@@ -13,7 +13,15 @@ import Recommend from "@/components/index/recommend.vue";
     </div>
 
     <div class="minor">
-<!--      <minor></minor>-->
+      <minor></minor>
+    </div>
+
+    <div class="main">
+      <recommend></recommend>
+    </div>
+
+    <div class="minor">
+      <minor></minor>
     </div>
 
   </div>
@@ -22,7 +30,6 @@ import Recommend from "@/components/index/recommend.vue";
 <style scoped lang="scss">
 .index {
   margin: 2% auto;
-  overflow: auto;
 
   display: flex;
   flex-direction: column;
@@ -30,6 +37,7 @@ import Recommend from "@/components/index/recommend.vue";
 
   .main {
     width: 90%;
+    margin-bottom: 1%;
   }
 
   .minor {
