@@ -1,24 +1,18 @@
 <script setup>
-
-import {ref} from "vue";
 import router from "@/router";
+import { usePageStore } from '@/store/usePageStore'
+const pageStore = usePageStore();
 
-const props = defineProps(['guides'])
-let selected = ref('index');
-
-function jump(select) {
-  selected.value = select;
-  if (select !== 'index' && select !== 'profile') {
-    select = 'developed';
-  }
-  router.push({name: select});
+function jump(index) {
+  pageStore.select(index);
+  router.push({name: pageStore.page})
 }
 
 </script>
 
 <template>
-  <div class="list " v-for="guide in props.guides" :class="{selected: selected === guide}" @click="jump(guide)">
-      <img src="../../../assets/icons/house.svg" alt="icon"> {{guide}}
+  <div class="list " v-for="(guide, index) in pageStore.guidesZh" :class="{'selected': index === pageStore.selected}" @click="jump(index)">
+      <img src="../../../assets/images/icons/house.svg" alt="icon"> {{guide}}
   </div>
 </template>
 

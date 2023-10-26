@@ -1,66 +1,39 @@
 <script setup>
-import Topbar from "@/components/overall/topbar.vue";
-import {ref} from "vue";
 
-const name = ref('index');
-
+import Minor from "@/components/index/minor.vue";
+import Recommend from "@/components/index/recommend.vue";
 </script>
 
 <template>
 
-  <topbar :name="name" />
+  <div class="index">
 
-<!--  <topbar/>-->
+    <div class="main">
+      <recommend></recommend>
+    </div>
 
-<!--  <div class="index">-->
+    <div class="minor">
+<!--      <minor></minor>-->
+    </div>
 
-<!--    <div class="main">-->
-<!--      <div class="banner">-->
-<!--        <img src="../assets/arte.svg" alt="banner">-->
-<!--        <div class="content">-->
-<!--          <h3>Vídeo em destaque</h3>-->
-<!--          <h2>HZC - Life is... / 2021</h2>-->
-<!--          <div class="admin">-->
-<!--            <img src="../assets/avatars/head.png" alt="header">-->
-<!--            <span>maifuwa</span>-->
-<!--          </div>-->
-<!--          <div class="browse">-->
-<!--            <span><img src="../assets/icons/time.svg" alt=""> 33分钟</span>-->
-<!--            <span><img src="../assets/icons/eye.svg" alt=""> 53次观看</span>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--        <span class="btn">-->
-<!--          <img src="../assets/icons/vector.svg" alt="">-->
-<!--          播放-->
-<!--        </span>-->
-<!--      </div>-->
-
-<!--      <div class="brief">-->
-
-<!--      </div>-->
-
-<!--    </div>-->
-
-<!--    <div class="content">-->
-
-<!--    </div>-->
-
-<!--    <div class="minor">-->
-<!--      <div class="brief">-->
-
-<!--      </div>-->
-
-<!--      <div class="banner">-->
-
-<!--      </div>-->
-
-<!--    </div>-->
-
-
-
-<!--  </div>-->
+  </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+.index {
+  margin: 2% auto;
+  overflow: auto;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .main {
+    width: 90%;
+  }
+
+  .minor {
+    width: 90%;
+  }
+}
 </style>

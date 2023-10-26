@@ -1,5 +1,6 @@
 <script setup>
 import Sidebar from "@/components/overall/sidebar.vue";
+import Topbar from "@/components/overall/topbar.vue";
 
 </script>
 
@@ -9,6 +10,7 @@ import Sidebar from "@/components/overall/sidebar.vue";
       <sidebar/>
     </div>
     <div class="content">
+      <topbar />
       <router-view></router-view>
     </div>
   </div>

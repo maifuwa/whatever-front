@@ -1,15 +1,12 @@
 <script setup>
-import {ref} from "vue";
 import List from "@/components/overall/sidebar/list.vue";
-
-const guides = ref(['index', 'article', 'community', 'profile'])
 </script>
 
 <template>
   <div class="side">
-    <img src="../../assets/logo.svg" alt="logo">
+    <img src="../../assets/images/logo.svg" alt="logo">
     <div class="content">
-      <list :guides="guides"></list>
+      <list />
     </div>
   </div>
 </template>

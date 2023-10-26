@@ -1,0 +1,17 @@
+{
+  "code": 200,
+  "data": {
+    "articles": [
+      {
+        "name": "这是一篇测试文章",
+        "author": "测试1",
+        "image": "../../../assets/images/article/article1.svg"
+      },
+      {
+        "name": "这也是一篇测试文章",
+        "author": "测试2",
+        "image": "../../../assets/images/article/article2.svg"
+      }
+    ]
+  }
+}
