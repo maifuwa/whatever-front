@@ -6,6 +6,6 @@
   <div>用户信息</div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 
 </style>

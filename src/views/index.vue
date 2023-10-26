@@ -2,6 +2,7 @@
 
 import Minor from "@/components/index/minor.vue";
 import Recommend from "@/components/index/recommend.vue";
+import Secondary from "@/components/index/secondary.vue";
 </script>
 
 <template>
@@ -17,11 +18,7 @@ import Recommend from "@/components/index/recommend.vue";
     </div>
 
     <div class="main">
-      <recommend></recommend>
-    </div>
-
-    <div class="minor">
-      <minor></minor>
+      <secondary></secondary>
     </div>
 
   </div>

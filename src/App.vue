@@ -1,6 +1,7 @@
 <script setup>
 import Sidebar from "@/components/overall/sidebar.vue";
 import Topbar from "@/components/overall/topbar.vue";
+import {onMounted, ref} from "vue";
 
 </script>
 
@@ -32,13 +33,13 @@ import Topbar from "@/components/overall/topbar.vue";
     flex: 1;
     height: 100%;
 
-
+    position: sticky;
+    top: 0;
   }
   .content {
     flex: 9;
   }
 }
-
 
 
 </style>

@@ -1,6 +1,7 @@
 <script setup>
 import { usePageStore } from '@/store/usePageStore'
 const pageStore = usePageStore();
+
 </script>
 
 <template>
@@ -25,9 +26,13 @@ const pageStore = usePageStore();
     justify-content: space-between;
     align-items: center;
 
-    padding: 0 60px;
-
+    padding: 0 5%;
     border-bottom: 2px #15191C solid;
+
+    background-color: #1D232A;
+    position: sticky;
+    top: 0;
+
     h2 {
       font-size: 30px;
       font-weight: bold;
@@ -54,5 +59,4 @@ const pageStore = usePageStore();
       }
     }
   }
-
 </style>

@@ -5,8 +5,17 @@ import ArticleVertical from "@/components/index/main/articleVertical.vue";
 
 <template>
   <div class="main">
+    <div class="article">
+      <div class="header">
+        <h4>文章推荐</h4>
+        <span>刷新</span>
+      </div>
+      <div class="list">
+        <article-vertical />
+      </div>
+    </div>
     <div class="banner">
-      <img src="../../assets/images/banner1.svg" alt="">
+      <img src="../../assets/images/banner2.svg" alt="">
       <div class="content">
         <div class="recommend">
           <div class="title">
@@ -28,17 +37,8 @@ import ArticleVertical from "@/components/index/main/articleVertical.vue";
       </div>
     </div>
 
-    <div class="article">
-      <div class="header">
-        <h4>文章推荐</h4>
-        <span>刷新</span>
-      </div>
-     <div class="list">
-       <article-vertical />
-     </div>
-    </div>
-  </div>
 
+  </div>
 </template>
 
 <style scoped lang="scss">
