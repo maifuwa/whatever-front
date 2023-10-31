@@ -8,7 +8,7 @@ const accountStore = useAccountStore();
 
 const form = ref({
   username: accountStore.user.name,
-  introduction: accountStore.user.introduction
+  introduction: ''
 });
 
 const changeProfile = function (e) {
@@ -30,7 +30,7 @@ const changeProfile = function (e) {
 
       <div>
         <p>世界宣言</p>
-        <textarea name="introduction" v-model="form.introduction" placeholder="大胆的喊出你的期盼吧!"></textarea>
+        <textarea name="introduction" v-model="form.introduction" placeholder="大胆的喊出你的期盼吧!" />
       </div>
 
       <div class="btn">

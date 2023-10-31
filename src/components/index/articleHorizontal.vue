@@ -1,45 +1,15 @@
 <script setup>
 
-import {ref} from "vue";
+import {onMounted, ref} from "vue";
 
-let articles = ref([
-  {
-    "title": "这是一篇测试文章",
-    "author": "测试1",
-    "image": "src/assets/images/article/article1.svg",
-    "release": "2023/10/26"
-  },
-  {
-    "title": "这也是测试文章",
-    "author": "测试2",
-    "image": "src/assets/images/article/article2.svg",
-    "release": "2023/10/26"
-  },
-  {
-    "title": "这是一篇测试文章",
-    "author": "测试1",
-    "image": "src/assets/images/article/article1.svg",
-    "release": "2023/10/26"
-  },
-  {
-    "title": "这也是测试文章",
-    "author": "测试2",
-    "image": "src/assets/images/article/article2.svg",
-    "release": "2023/10/26"
-  },
-  {
-    "title": "这是一篇测试文章",
-    "author": "测试1",
-    "image": "src/assets/images/article/article1.svg",
-    "release": "2023/10/26"
-  },
-  {
-    "title": "这也是测试文章",
-    "author": "测试2",
-    "image": "src/assets/images/article/article2.svg",
-    "release": "2023/10/26"
-  }
-]);
+let articles = ref({});
+
+onMounted(async () => {
+  // TODO: 获取推荐文章
+  let response = await fetch('/static/article.json');
+  let json = await response.json()
+  articles.value = json.data;
+})
 
 </script>
 

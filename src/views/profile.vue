@@ -24,7 +24,7 @@ import ClassSchedule from "@/components/profile/classSchedule.vue";
       width: 20%;
     }
 
-    .schedule {
+    .classSchedule {
       width: 60%;
     }
   }

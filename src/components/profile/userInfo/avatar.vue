@@ -23,7 +23,7 @@ const avatarUrl = useAccountStore().user.avatarUrl
     border-radius: 100%;
   }
   img:last-child {
-    width: 10%;
+    width: 12%;
 
     padding: 1%;
     background-color: white;

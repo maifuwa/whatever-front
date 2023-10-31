@@ -1,0 +1,292 @@
+{
+  "code": 200,
+  "data": [
+    {
+      "name": "Android高级编程",
+      "fullName": "Android高级编程-0001",
+      "credit": 4.0,
+      "courseNum": "6-9节",
+      "day": 1,
+      "week": "1-3周(单),4-10周",
+      "campus": "新校区",
+      "location": "理科群1号楼C402",
+      "teacher": "李玮玮"
+    },
+    {
+      "name": "智能设备开发实训一",
+      "fullName": "智能设备开发实训一-0001",
+      "credit": 5.0,
+      "courseNum": "6-9节",
+      "day": 1,
+      "week": "11-17周",
+      "campus": "新校区",
+      "location": "理科群1号楼C402",
+      "teacher": "胡国欣"
+    },
+    {
+      "name": "化学漫谈",
+      "fullName": "化学漫谈-0001",
+      "credit": 2.0,
+      "courseNum": "11-13节",
+      "day": 1,
+      "week": "1-11周",
+      "campus": "新校区",
+      "location": "公共教学楼A座104",
+      "teacher": "刘博"
+    },
+    {
+      "name": "Java企业级应用开发一",
+      "fullName": "Java企业级应用开发一-0001",
+      "credit": 4.0,
+      "courseNum": "1-4节",
+      "day": 2,
+      "week": "1-10周",
+      "campus": "新校区",
+      "location": "理科群1号楼C402",
+      "teacher": "王伟"
+    },
+    {
+      "name": "智能设备开发实训一",
+      "fullName": "智能设备开发实训一-0001",
+      "credit": 5.0,
+      "courseNum": "1-4节",
+      "day": 2,
+      "week": "11-17周",
+      "campus": "新校区",
+      "location": "理科群1号楼C402",
+      "teacher": "王伟"
+    },
+    {
+      "name": "智能设备开发实训一",
+      "fullName": "智能设备开发实训一-0001",
+      "credit": 5.0,
+      "courseNum": "1-4节",
+      "day": 3,
+      "week": "17周",
+      "campus": "新校区",
+      "location": "理科群1号楼C402",
+      "teacher": "苏烨"
+    },
+    {
+      "name": "智能设备开发实训一",
+      "fullName": "智能设备开发实训一-0001",
+      "credit": 5.0,
+      "courseNum": "1-9节",
+      "day": 3,
+      "week": "11-16周",
+      "campus": "新校区",
+      "location": "理科群1号楼C402",
+      "teacher": "苏烨"
+    },
+    {
+      "name": "Spring框架开发",
+      "fullName": "Spring框架开发-0001",
+      "credit": 4.0,
+      "courseNum": "6-9节",
+      "day": 3,
+      "week": "1-10周",
+      "campus": "新校区",
+      "location": "理科群1号楼C402",
+      "teacher": "胡国欣"
+    },
+    {
+      "name": "智能设备开发实训一",
+      "fullName": "智能设备开发实训一-0001",
+      "credit": 5.0,
+      "courseNum": "6-9节",
+      "day": 3,
+      "week": "17周",
+      "campus": "新校区",
+      "location": "理科群1号楼C402",
+      "teacher": "苏烨"
+    },
+    {
+      "name": "智能设备开发实训一",
+      "fullName": "智能设备开发实训一-0001",
+      "credit": 5.0,
+      "courseNum": "1-2节",
+      "day": 4,
+      "week": "11-17周",
+      "campus": "新校区",
+      "location": "理科群1号楼C402",
+      "teacher": "胡国欣"
+    },
+    {
+      "name": "Java企业级应用开发一",
+      "fullName": "Java企业级应用开发一-0001A",
+      "credit": 4.0,
+      "courseNum": "1-4节",
+      "day": 4,
+      "week": "1-3周,5-10周",
+      "campus": "新校区",
+      "location": "理科群1号楼C402",
+      "teacher": "王伟"
+    },
+    {
+      "name": "项目管理",
+      "fullName": "项目管理-0004",
+      "credit": 0.5,
+      "courseNum": "3-4节",
+      "day": 4,
+      "week": "13-17周",
+      "campus": "新校区",
+      "location": "理科群1号楼C402",
+      "teacher": "胡国欣"
+    },
+    {
+      "name": "项目管理",
+      "fullName": "项目管理-0004",
+      "credit": 0.5,
+      "courseNum": "3-5节",
+      "day": 4,
+      "week": "11-12周",
+      "campus": "新校区",
+      "location": "理科群1号楼C402",
+      "teacher": "胡国欣"
+    },
+    {
+      "name": "Android高级编程",
+      "fullName": "Android高级编程-0001A",
+      "credit": 4.0,
+      "courseNum": "11-12节",
+      "day": 4,
+      "week": "13-14周",
+      "campus": "新校区",
+      "location": "理科群1号楼C402",
+      "teacher": "李玮玮"
+    },
+    {
+      "name": "Android高级编程",
+      "fullName": "Android高级编程-0001A",
+      "credit": 4.0,
+      "courseNum": "11-13节",
+      "day": 4,
+      "week": "1-3周,5-12周",
+      "campus": "新校区",
+      "location": "理科群1号楼C402",
+      "teacher": "李玮玮"
+    },
+    {
+      "name": "形势与政策五",
+      "fullName": "形势与政策五-0011",
+      "credit": 0.2,
+      "courseNum": "1-2节",
+      "day": 5,
+      "week": "9周",
+      "campus": "新校区",
+      "location": "公共教学楼D座304",
+      "teacher": "张扬"
+    },
+    {
+      "name": "形势与政策五",
+      "fullName": "形势与政策五-0011",
+      "credit": 0.2,
+      "courseNum": "1-2节",
+      "day": 5,
+      "week": "10周",
+      "campus": "新校区",
+      "location": "公共教学楼D座304",
+      "teacher": "冯斐然"
+    },
+    {
+      "name": "形势与政策五",
+      "fullName": "形势与政策五-0011",
+      "credit": 0.2,
+      "courseNum": "1-2节",
+      "day": 5,
+      "week": "11周",
+      "campus": "新校区",
+      "location": "公共教学楼D座304",
+      "teacher": "胡晗萌"
+    },
+    {
+      "name": "形势与政策五",
+      "fullName": "形势与政策五-0011",
+      "credit": 0.2,
+      "courseNum": "1-2节",
+      "day": 5,
+      "week": "12周",
+      "campus": "新校区",
+      "location": "公共教学楼D座304",
+      "teacher": "郝晨晓"
+    },
+    {
+      "name": "软件工程",
+      "fullName": "软件工程-0008",
+      "credit": 2.0,
+      "courseNum": "3-4节",
+      "day": 5,
+      "week": "1-3周,5-16周",
+      "campus": "新校区",
+      "location": "理科群1号楼C204",
+      "teacher": "杨胜强"
+    },
+    {
+      "name": "Spring框架开发",
+      "fullName": "Spring框架开发-0001A",
+      "credit": 4.0,
+      "courseNum": "6-9节",
+      "day": 5,
+      "week": "1-10周",
+      "campus": "新校区",
+      "location": "理科群1号楼C402",
+      "teacher": "胡国欣"
+    },
+    {
+      "name": "智能设备开发实训一",
+      "fullName": "智能设备开发实训一-0001",
+      "credit": 5.0,
+      "courseNum": "6-9节",
+      "day": 5,
+      "week": "11-17周",
+      "campus": "新校区",
+      "location": "理科群1号楼C402",
+      "teacher": "王伟"
+    },
+    {
+      "name": "Android高级编程",
+      "fullName": "Android高级编程-0001",
+      "credit": 4.0,
+      "courseNum": "1-4节",
+      "day": 6,
+      "week": "2周",
+      "campus": "新校区",
+      "location": "理科群1号楼C402",
+      "teacher": "李玮玮"
+    },
+    {
+      "name": "Java企业级应用开发一",
+      "fullName": "Java企业级应用开发一-0001A",
+      "credit": 4.0,
+      "courseNum": "1-4节",
+      "day": 6,
+      "week": "4周",
+      "campus": "新校区",
+      "location": "理科群1号楼C402",
+      "teacher": "王伟"
+    },
+    {
+      "name": "Android高级编程",
+      "fullName": "Android高级编程-0001A",
+      "credit": 4.0,
+      "courseNum": "11-13节",
+      "day": 6,
+      "week": "4周",
+      "campus": "新校区",
+      "location": "理科群1号楼C402",
+      "teacher": "李玮玮"
+    },
+    {
+      "name": "软件工程",
+      "fullName": "软件工程-0008",
+      "credit": 2.0,
+      "courseNum": "3-4节",
+      "day": 7,
+      "week": "4周",
+      "campus": "新校区",
+      "location": "理科群1号楼C204",
+      "teacher": "杨胜强"
+    }
+  ],
+  "message": "请求成功"
+}

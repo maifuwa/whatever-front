@@ -3,6 +3,7 @@ import {ref} from "vue";
 
 export const useAccountStore = defineStore("useAccountStore", () => {
     const user = ref({
+        token: '',
         name: 'guest',
         avatarUrl: 'src/assets/images/avatars/avatar.jpg',
         introduction: '这个用户很懒，什么都没有写'
@@ -13,6 +14,13 @@ export const useAccountStore = defineStore("useAccountStore", () => {
         user.value.introduction = introduction;
     }
 
-    return {user, changeUserInfo};
+    function login(token, name, avatarUrl, introduction) {
+        user.value.token = token;
+        user.value.name = name;
+        user.value.avatarUrl = avatarUrl;
+        user.value.introduction = introduction;
+    }
+
+    return {user, changeUserInfo, login};
 });
 

@@ -47,7 +47,7 @@ const accountStore = useAccountStore();
 
       img {
         margin-left: 15%;
-        width: 30%;
+        width: 45%;
       }
 
       .user {
