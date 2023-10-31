@@ -1,11 +1,33 @@
 <script setup>
+import UserInfo from "@/components/profile/userInfo.vue";
+import ClassSchedule from "@/components/profile/classSchedule.vue";
 
 </script>
 
 <template>
-  <div>用户信息</div>
+  <div class="profile">
+
+    <user-info></user-info>
+
+    <class-schedule></class-schedule>
+
+  </div>
 </template>
 
 <style scoped lang="scss">
+  .profile {
+    margin: 2% auto;
+    display: flex;
+    justify-content: space-around;
+
+    .userInfo {
+      width: 20%;
+    }
+
+    .schedule {
+      width: 60%;
+    }
+  }
+
 
 </style>

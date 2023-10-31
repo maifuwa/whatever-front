@@ -1,7 +1,9 @@
 <script setup>
 import { usePageStore } from '@/store/usePageStore'
-const pageStore = usePageStore();
+import {useAccountStore} from "@/store/useAccountStore";
 
+const pageStore = usePageStore();
+const accountStore = useAccountStore();
 </script>
 
 <template>
@@ -9,8 +11,8 @@ const pageStore = usePageStore();
     <h2>{{pageStore.guidesZh[pageStore.selected]}}</h2>
     <div class="userInfo">
       <div class="user">
-        <img src="../../assets/images/avatars/head.png" alt="header">
-        maifuwa
+        <img :src="accountStore.user.avatarUrl" alt="header">
+        {{accountStore.user.name}}
       </div>
       <img src="../../assets/images/icons/message.svg" alt="message">
     </div>
@@ -51,10 +53,14 @@ const pageStore = usePageStore();
       .user {
         font-size: 18px;
         border-right: 1px white solid;
+
         img {
-          margin-right: 4%;
+          margin-right: 6%;
           vertical-align: middle;
-          width: 18%;
+          width: 20%;
+          border-radius: 100%;
+
+          cursor: pointer;
         }
       }
     }

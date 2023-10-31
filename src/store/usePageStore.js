@@ -18,5 +18,5 @@ export const usePageStore = defineStore('usePageStore', () => {
         selected.value = select;
     }
 
-    return {page, guidesZh,selected, select}
+    return {page, guidesZh,selected, select};
 });

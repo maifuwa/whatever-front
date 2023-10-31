@@ -1,6 +1,6 @@
 <script setup>
 
-import ArticleVertical from "@/components/index/main/articleVertical.vue";
+import ArticleVertical from "@/components/index/articleVertical.vue";
 </script>
 
 <template>

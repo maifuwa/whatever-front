@@ -1,6 +1,6 @@
 <script setup>
 
-import ArticleHorizontal from "@/components/index/minor/articleHorizontal.vue";
+import ArticleHorizontal from "@/components/index/articleHorizontal.vue";
 </script>
 
 <template>
