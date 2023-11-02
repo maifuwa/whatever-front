@@ -26,7 +26,7 @@ const upload = function (e) {
 
       <div>
         <p>课程json</p>
-        <textarea name="course" v-model="form.course" rows="18" />
+        <textarea name="course" v-model="form.course" rows="18" ></textarea>
       </div>
 
       <button type="submit">提交</button>

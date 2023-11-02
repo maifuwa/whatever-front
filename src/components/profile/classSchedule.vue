@@ -8,23 +8,24 @@ const accountStore = useAccountStore();
 
 const isLogin = computed(() => {
   // TODO: 判断是否登陆
-  return false;
+  return true;
 })
 
 </script>
 
 <template>
   <div class="classSchedule">
-    <div v-if="isLogin" class="noLogin">
+
+    <div  v-if="isLogin" class="login">
+      <h2>课程表</h2>
+      <schedule />
+    </div>
+
+    <div v-else class="noLogin">
       <h2>登陆获取课程表</h2>
       <div>
         点击 <span>登陆</span> or <span>注册</span>
       </div>
-    </div>
-
-    <div v-else class="login">
-      <h2>课程表</h2>
-      <schedule />
     </div>
 
   </div>

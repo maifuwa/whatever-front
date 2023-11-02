@@ -1,5 +1,5 @@
 <script setup>
-import {onMounted, ref} from "vue";
+import {onMounted, ref, provide} from "vue";
 import UploadCourse from "@/components/profile/classSchedule/uploadCourse.vue";
 import Course from "@/components/profile/classSchedule/course.vue";
 
@@ -10,13 +10,16 @@ onMounted(async () => {
   let response = await fetch('/static/courses.json');
   let json = await response.json()
   schedules.value = json.data;
+  // schedules.value = undefined
 });
+
+provide('schedules', schedules);
 </script>
 
 <template>
   <div class="schedule">
     <upload-course v-if="schedules === undefined" />
-    <course v-else :schedules="schedules" />
+    <course v-else />
   </div>
 </template>
 

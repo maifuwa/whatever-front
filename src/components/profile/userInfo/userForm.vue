@@ -30,7 +30,7 @@ const changeProfile = function (e) {
 
       <div>
         <p>世界宣言</p>
-        <textarea name="introduction" v-model="form.introduction" placeholder="大胆的喊出你的期盼吧!" />
+        <textarea name="introduction" v-model="form.introduction" placeholder="大胆的喊出你的期盼吧!" ></textarea>
       </div>
 
       <div class="btn">
