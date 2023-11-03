@@ -1,9 +1,17 @@
 <script setup>
 import { usePageStore } from '@/store/usePageStore'
 import {useAccountStore} from "@/store/useAccountStore";
+import {inject} from "vue";
 
 const pageStore = usePageStore();
 const accountStore = useAccountStore();
+const changeLoginShow = inject('changeLoginShow');
+
+function login() {
+  if (!accountStore.isLogin) {
+    changeLoginShow();
+  }
+}
 </script>
 
 <template>
@@ -11,7 +19,7 @@ const accountStore = useAccountStore();
     <h2>{{pageStore.guidesZh[pageStore.selected]}}</h2>
     <div class="userInfo">
       <div class="user">
-        <img :src="accountStore.user.avatarUrl" alt="header">
+        <img :src="accountStore.user.avatarUrl" alt="header" @click="login">
         {{accountStore.user.name}}
       </div>
       <img src="../../assets/images/icons/message.svg" alt="message">

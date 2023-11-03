@@ -2,28 +2,23 @@
 
 import {useAccountStore} from "@/store/useAccountStore";
 import Schedule from "@/components/profile/classSchedule/schedule.vue";
-import {computed} from "vue";
+import {inject} from "vue";
 
 const accountStore = useAccountStore();
-
-const isLogin = computed(() => {
-  // TODO: 判断是否登陆
-  return true;
-})
-
+const changeLoginShow = inject('changeLoginShow');
 </script>
 
 <template>
   <div class="classSchedule">
 
-    <div  v-if="isLogin" class="login">
+    <div  v-if="accountStore.isLogin" class="login">
       <h2>课程表</h2>
       <schedule />
     </div>
 
     <div v-else class="noLogin">
       <h2>登陆获取课程表</h2>
-      <div>
+      <div @click="changeLoginShow">
         点击 <span>登陆</span> or <span>注册</span>
       </div>
     </div>
@@ -48,6 +43,7 @@ const isLogin = computed(() => {
       span {
         font-size: 20px;
         color: deepskyblue;
+        cursor: pointer;
       }
     }
 

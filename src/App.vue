@@ -1,7 +1,13 @@
 <script setup>
 import Sidebar from "@/components/overall/sidebar.vue";
 import Topbar from "@/components/overall/topbar.vue";
+import Login from "@/components/overall/login.vue";
+import {ref, provide} from "vue";
 
+
+const isLoginShow = ref(true);
+provide("isLoginShow", isLoginShow);
+provide('changeLoginShow', () => isLoginShow.value = !isLoginShow.value);
 </script>
 
 <template>
@@ -9,11 +15,14 @@ import Topbar from "@/components/overall/topbar.vue";
     <div class="side">
       <sidebar/>
     </div>
+
     <div class="content">
       <topbar />
       <router-view></router-view>
     </div>
   </div>
+
+  <login></login>
 </template>
 
 <style scoped lang="scss">
