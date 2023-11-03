@@ -1,16 +1,34 @@
 <script setup>
-import {inject} from "vue";
+import {useCourseStore} from "@/store/useCourseStore";
+import CourseAllSingle from "@/components/profile/classSchedule/CourseAllSingle.vue";
 
-const schedules = inject('schedules');
+const courseStore = useCourseStore();
+defineProps(['weekNum']);
 
 </script>
 
 <template>
   <div class="courseAll">
-    这里是全部
+    <div class="day" v-for="index in 7">
+      <div class="course" v-for="course in courseStore.dayCourse(weekNum, index)">
+        <course-all-single :course="course"></course-all-single>
+      </div>
+    </div>
   </div>
 </template>
 
 <style scoped lang="scss">
+.courseAll {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  .day {
+    display: flex;
+    flex-direction: column;
 
+    .course {
+      margin-bottom: 20%;
+    }
+  }
+}
 </style>

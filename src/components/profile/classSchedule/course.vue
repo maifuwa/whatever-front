@@ -3,12 +3,10 @@
 import {provide, ref} from "vue";
 import ShowWeek from "@/components/profile/classSchedule/showWeek.vue";
 import CourseAll from "@/components/profile/classSchedule/courseAll.vue";
-import CourseCard from "@/components/profile/classSchedule/courseCard.vue";
 import dayjs from "dayjs";
 
 const startDays = ref(dayjs('2023-09-11'));
-let nowWeek = dayjs().diff(startDays.value, 'week');
-const weekNum = ref(nowWeek);
+const weekNum = ref(dayjs().diff(startDays.value, 'week'));
 
 provide('startDays', startDays.value);
 </script>
@@ -16,8 +14,7 @@ provide('startDays', startDays.value);
 <template>
   <div class="course">
     <show-week :weekNum="weekNum" @add-week="weekNum++" @sub-week="weekNum--"></show-week>
-    <course-card v-if="weekNum === nowWeek"></course-card>
-    <course-all v-else></course-all>
+    <course-all :weekNum="weekNum"></course-all>
   </div>
 </template>
 
@@ -25,6 +22,8 @@ provide('startDays', startDays.value);
 .course {
   width: 100%;
 
-
+  .showWeek {
+    margin-bottom: 5%;
+  }
 }
 </style>

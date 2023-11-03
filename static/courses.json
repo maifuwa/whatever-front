@@ -7,7 +7,7 @@
       "credit": 4.0,
       "courseNum": "6-9节",
       "day": 1,
-      "week": "1-3周(单),4-10周",
+      "week": ",1,3,4,5,6,7,8,9,10,",
       "campus": "新校区",
       "location": "理科群1号楼C402",
       "teacher": "李玮玮"
@@ -18,7 +18,7 @@
       "credit": 5.0,
       "courseNum": "6-9节",
       "day": 1,
-      "week": "11-17周",
+      "week": ",11,12,13,14,15,16,17,",
       "campus": "新校区",
       "location": "理科群1号楼C402",
       "teacher": "胡国欣"
@@ -29,7 +29,7 @@
       "credit": 2.0,
       "courseNum": "11-13节",
       "day": 1,
-      "week": "1-11周",
+      "week": ",1,2,3,4,5,6,7,8,9,10,11,",
       "campus": "新校区",
       "location": "公共教学楼A座104",
       "teacher": "刘博"
@@ -40,7 +40,7 @@
       "credit": 4.0,
       "courseNum": "1-4节",
       "day": 2,
-      "week": "1-10周",
+      "week": ",1,2,3,4,5,6,7,8,9,10,",
       "campus": "新校区",
       "location": "理科群1号楼C402",
       "teacher": "王伟"
@@ -51,7 +51,7 @@
       "credit": 5.0,
       "courseNum": "1-4节",
       "day": 2,
-      "week": "11-17周",
+      "week": ",11,12,13,14,15,16,17,",
       "campus": "新校区",
       "location": "理科群1号楼C402",
       "teacher": "王伟"
@@ -62,7 +62,7 @@
       "credit": 5.0,
       "courseNum": "1-4节",
       "day": 3,
-      "week": "17周",
+      "week": ",17,",
       "campus": "新校区",
       "location": "理科群1号楼C402",
       "teacher": "苏烨"
@@ -73,7 +73,7 @@
       "credit": 5.0,
       "courseNum": "1-9节",
       "day": 3,
-      "week": "11-16周",
+      "week": ",11,12,13,14,15,16,",
       "campus": "新校区",
       "location": "理科群1号楼C402",
       "teacher": "苏烨"
@@ -84,7 +84,7 @@
       "credit": 4.0,
       "courseNum": "6-9节",
       "day": 3,
-      "week": "1-10周",
+      "week": ",1,2,3,4,5,6,7,8,9,10,",
       "campus": "新校区",
       "location": "理科群1号楼C402",
       "teacher": "胡国欣"
@@ -95,7 +95,7 @@
       "credit": 5.0,
       "courseNum": "6-9节",
       "day": 3,
-      "week": "17周",
+      "week": ",17,",
       "campus": "新校区",
       "location": "理科群1号楼C402",
       "teacher": "苏烨"
@@ -106,7 +106,7 @@
       "credit": 5.0,
       "courseNum": "1-2节",
       "day": 4,
-      "week": "11-17周",
+      "week": ",11,12,13,14,15,16,17,",
       "campus": "新校区",
       "location": "理科群1号楼C402",
       "teacher": "胡国欣"
@@ -117,7 +117,7 @@
       "credit": 4.0,
       "courseNum": "1-4节",
       "day": 4,
-      "week": "1-3周,5-10周",
+      "week": ",1,2,3,5,6,7,8,9,10,",
       "campus": "新校区",
       "location": "理科群1号楼C402",
       "teacher": "王伟"
@@ -128,7 +128,7 @@
       "credit": 0.5,
       "courseNum": "3-4节",
       "day": 4,
-      "week": "13-17周",
+      "week": ",13,14,15,16,17,",
       "campus": "新校区",
       "location": "理科群1号楼C402",
       "teacher": "胡国欣"
@@ -139,7 +139,7 @@
       "credit": 0.5,
       "courseNum": "3-5节",
       "day": 4,
-      "week": "11-12周",
+      "week": ",11,12,",
       "campus": "新校区",
       "location": "理科群1号楼C402",
       "teacher": "胡国欣"
@@ -150,7 +150,7 @@
       "credit": 4.0,
       "courseNum": "11-12节",
       "day": 4,
-      "week": "13-14周",
+      "week": ",13,14,",
       "campus": "新校区",
       "location": "理科群1号楼C402",
       "teacher": "李玮玮"
@@ -161,7 +161,7 @@
       "credit": 4.0,
       "courseNum": "11-13节",
       "day": 4,
-      "week": "1-3周,5-12周",
+      "week": ",1,2,3,5,6,7,8,9,10,11,12,",
       "campus": "新校区",
       "location": "理科群1号楼C402",
       "teacher": "李玮玮"
@@ -172,7 +172,7 @@
       "credit": 0.2,
       "courseNum": "1-2节",
       "day": 5,
-      "week": "9周",
+      "week": ",9,",
       "campus": "新校区",
       "location": "公共教学楼D座304",
       "teacher": "张扬"
@@ -183,7 +183,7 @@
       "credit": 0.2,
       "courseNum": "1-2节",
       "day": 5,
-      "week": "10周",
+      "week": ",10,",
       "campus": "新校区",
       "location": "公共教学楼D座304",
       "teacher": "冯斐然"
@@ -194,7 +194,7 @@
       "credit": 0.2,
       "courseNum": "1-2节",
       "day": 5,
-      "week": "11周",
+      "week": ",11,",
       "campus": "新校区",
       "location": "公共教学楼D座304",
       "teacher": "胡晗萌"
@@ -205,7 +205,7 @@
       "credit": 0.2,
       "courseNum": "1-2节",
       "day": 5,
-      "week": "12周",
+      "week": ",12,",
       "campus": "新校区",
       "location": "公共教学楼D座304",
       "teacher": "郝晨晓"
@@ -216,7 +216,7 @@
       "credit": 2.0,
       "courseNum": "3-4节",
       "day": 5,
-      "week": "1-3周,5-16周",
+      "week": ",1,2,3,5,6,7,8,9,10,11,12,13,14,15,16,",
       "campus": "新校区",
       "location": "理科群1号楼C204",
       "teacher": "杨胜强"
@@ -227,7 +227,7 @@
       "credit": 4.0,
       "courseNum": "6-9节",
       "day": 5,
-      "week": "1-10周",
+      "week": ",1,2,3,4,5,6,7,8,9,10,",
       "campus": "新校区",
       "location": "理科群1号楼C402",
       "teacher": "胡国欣"
@@ -238,7 +238,7 @@
       "credit": 5.0,
       "courseNum": "6-9节",
       "day": 5,
-      "week": "11-17周",
+      "week": ",11,12,13,14,15,16,17,",
       "campus": "新校区",
       "location": "理科群1号楼C402",
       "teacher": "王伟"
@@ -249,7 +249,7 @@
       "credit": 4.0,
       "courseNum": "1-4节",
       "day": 6,
-      "week": "2周",
+      "week": ",2,",
       "campus": "新校区",
       "location": "理科群1号楼C402",
       "teacher": "李玮玮"
@@ -260,7 +260,7 @@
       "credit": 4.0,
       "courseNum": "1-4节",
       "day": 6,
-      "week": "4周",
+      "week": ",4,",
       "campus": "新校区",
       "location": "理科群1号楼C402",
       "teacher": "王伟"
@@ -271,7 +271,7 @@
       "credit": 4.0,
       "courseNum": "11-13节",
       "day": 6,
-      "week": "4周",
+      "week": ",4,",
       "campus": "新校区",
       "location": "理科群1号楼C402",
       "teacher": "李玮玮"
@@ -282,10 +282,10 @@
       "credit": 2.0,
       "courseNum": "3-4节",
       "day": 7,
-      "week": "4周",
+      "week": ",4,",
       "campus": "新校区",
       "location": "理科群1号楼C204",
-      "teacher": "杨胜强"
+      "teacher": "杨胜强-xinzeng"
     }
   ],
   "message": "请求成功"

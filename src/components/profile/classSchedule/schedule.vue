@@ -1,25 +1,18 @@
 <script setup>
-import {onMounted, ref, provide} from "vue";
+import {onMounted} from "vue";
 import UploadCourse from "@/components/profile/classSchedule/uploadCourse.vue";
 import Course from "@/components/profile/classSchedule/course.vue";
+import {useCourseStore} from "@/store/useCourseStore";
 
-const schedules = ref({});
 
-onMounted(async () => {
-  // TODO: 获取课程表
-  let response = await fetch('/static/courses.json');
-  let json = await response.json()
-  schedules.value = json.data;
-  // schedules.value = undefined
-});
-
-provide('schedules', schedules);
+const courseStore = useCourseStore();
+onMounted(() => courseStore.initCourse());
 </script>
 
 <template>
   <div class="schedule">
-    <upload-course v-if="schedules === undefined" />
-    <course v-else />
+    <course v-if="courseStore.hasSchedules" />
+    <upload-course v-else />
   </div>
 </template>
 
