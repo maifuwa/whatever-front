@@ -5,7 +5,7 @@ export const useAccountStore = defineStore("useAccountStore", () => {
     const user = ref({
         token: '',
         name: 'guest',
-        avatarUrl: 'src/assets/images/avatars/avatar.jpg',
+        avatarUrl: 'http://127.0.0.1:8080/avatar/default_avatar.png',
         introduction: '这个用户很懒，什么都没有写'
     });
 
@@ -25,6 +25,6 @@ export const useAccountStore = defineStore("useAccountStore", () => {
         return user.value.token !== '';
     })
 
-    return {user, changeUserInfo, isLogin};
+    return {user, changeUserInfo, isLogin, login};
 });
 

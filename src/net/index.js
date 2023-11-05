@@ -1,4 +1,7 @@
 import axios from "axios";
+import {useAccountStore} from "@/store/useAccountStore";
+
+const accountStore = useAccountStore();
 
 // 配置基础 axios
 const httpInstance = axios.create({
@@ -8,6 +11,7 @@ const httpInstance = axios.create({
 
 // 配置请求拦截器
 httpInstance.interceptors.request.use(config => {
+    config.Authorization = 'Bearer ' + accountStore.user.token;
     return config;
 }, error => Promise.reject(error));
 

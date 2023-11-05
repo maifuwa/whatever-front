@@ -1,9 +1,12 @@
 <script setup>
 
 import {inject, ref} from "vue";
-import {doLogin} from "@/api/userInfo";
+import {useAccountStore} from "@/store/useAccountStore";
+import {doLogin, getSignCode, signUp} from "@/api/userInfo";
 
-
+const changeLoginShow = inject('changeLoginShow');
+const isLoginShow = inject('isLoginShow');
+const accountStore = useAccountStore();
 const isLogin = ref(true);
 
 const form = ref({
@@ -13,21 +16,50 @@ const form = ref({
   code: ''
 });
 
+const errMessage = ref('');
+
 const onLogin = (e) => {
   e.preventDefault();
-  console.log(doLogin(form.value.username, form.value.password))
+  // TODO: check out input
+  doLogin(form.value.username, form.value.password)
+      .then(res => {
+        if (res.code === 200) {
+          accountStore.login(res.data.token, res.data.name, res.data.avatarUrl, res.data.introduction);
+          changeLoginShow();
+        }else {
+          errMessage.value = res.message;
+        }
+      })
 }
 
 const onSign = (e) => {
   e.preventDefault();
+  // TODO: check out input
+  signUp(form.value.email, form.value.username, form.value.password, form.value.code)
+      .then(res => {
+        if (res.code === 200) {
+          accountStore.login(res.data.token, res.data.name, res.data.avatarUrl, res.data.introduction);
+          changeLoginShow();
+          console.log("你好你好")
+        }else {
+          errMessage.value = res.message;
+        }
+      })
 }
 
-const getCode = () => {
-
+const getCode = (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+  // TODO: check out email
+  getSignCode(form.value.email)
+      .then(res => {
+        if (res.code === 200) {
+          errMessage.value = res.data;
+        }else {
+          errMessage.value = res.message;
+        }
+      })
 }
-
-const changeLoginShow = inject('changeLoginShow');
-const isLoginShow = inject('isLoginShow')
 </script>
 
 <template>
@@ -44,9 +76,10 @@ const isLoginShow = inject('isLoginShow')
     </div>
 
    <div class="onLogin" v-if="isLogin">
+     <div class="err">{{errMessage}}</div>
      <form @submit="onLogin($event)">
-       <input type="text" name="username" placeholder="用户名/邮箱" v-model="form.username">
-       <input type="text" name="password" placeholder="密码" v-model="form.password">
+       <input type="text" placeholder="用户名/邮箱" v-model="form.username">
+       <input type="text" placeholder="密码" v-model="form.password">
        <button type="submit">登录</button>
      </form>
 
@@ -54,13 +87,14 @@ const isLoginShow = inject('isLoginShow')
    </div>
 
     <div class="onSign" v-else>
+      <div class="err">{{errMessage}}</div>
       <form @submit="onSign($event)">
-        <input type="text" name="email" placeholder="邮箱" v-model="form.email">
-        <input type="text" name="username" placeholder="用户名" v-model="form.username">
-        <input type="text" name="password" placeholder="密码" v-model="form.password">
+        <input type="text" placeholder="邮箱" v-model="form.email">
+        <input type="text" placeholder="用户名" v-model="form.username">
+        <input type="text" placeholder="密码" v-model="form.password">
         <div class="code">
-          <input type="text" name="code" placeholder="验证码" v-model="form.code">
-          <button @click="getCode">获取验证码</button>
+          <input type="text" placeholder="验证码" v-model="form.code">
+          <button @click="getCode($event)">获取验证码</button>
         </div>
         <button type="submit">注册</button>
       </form>
