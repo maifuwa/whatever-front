@@ -2,6 +2,7 @@
 
 import {ref} from "vue";
 import {useAccountStore} from "@/store/useAccountStore";
+import {changeUserInfo} from "@/api/userInfo";
 
 const emit = defineEmits(['edit-info']);
 const accountStore = useAccountStore();
@@ -11,18 +12,26 @@ const form = ref({
   introduction: ''
 });
 
+const errMessage = ref();
 const changeProfile = function (e) {
   e.preventDefault();
-  // TODO: 网络请求修改用户名和用户简介
+  changeUserInfo(form.value.username, form.value.introduction)
+      .then(res => {
+        if (res.code === 200) {
+          accountStore.changeUserInfo(res.data.name, res.data.introduction);
+          emit('edit-info')
+        }else {
+          errMessage.value = res.message;
+        }
+      })
 
-  accountStore.changeUserInfo(form.value.username, form.value.introduction);
-  emit('edit-info')
 }
 </script>
 
 <template>
   <div class="userForm">
     <form @submit="changeProfile($event)">
+      <div class="err">{{errMessage}}</div>
       <div>
         <p>名字</p>
         <input name="username" v-model="form.username" type="text">

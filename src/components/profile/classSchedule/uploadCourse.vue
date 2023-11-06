@@ -1,5 +1,6 @@
 <script setup>
 import {ref} from "vue";
+import {useCourseStore} from "@/store/useCourseStore";
 
 const form = ref({
   password: '',
@@ -8,9 +9,7 @@ const form = ref({
 
 const upload = function (e) {
   e.preventDefault();
-
-  // TODO: 提交课程表
-  console.log("正在提交表单...");
+  useCourseStore().loadCourse(form.value.password, form.value.course);
 }
 
 </script>

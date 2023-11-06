@@ -1,4 +1,5 @@
 import httpInstance from "@/net";
+import {useAccountStore} from "@/store/useAccountStore";
 
 function doLogin(username, password) {
    return httpInstance({
@@ -44,5 +45,44 @@ function signUp(email, name, password, code) {
     })
 }
 
+function changeUserInfo(name, introduction) {
+    return httpInstance({
+        method: 'post',
+        url: '/api/auth/changeprofile',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Authorization': 'Bearer ' + useAccountStore().user.token
+        },
+        data: {
+            name: name,
+            introduction: introduction
+        }
+    })
+}
 
-export {doLogin, getSignCode, signUp}
+function getUserCourse() {
+    return httpInstance({
+        method: 'get',
+        url: '/schedule/obtain',
+        headers: {
+            'Authorization': 'Bearer ' + useAccountStore().user.token
+        }
+    })
+}
+
+function loadUserCourse(password, course) {
+    return httpInstance({
+        method: 'post',
+        url: '/schedule/upload',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Authorization': 'Bearer ' + useAccountStore().user.token
+        },
+        data: {
+            password: password,
+            course: course
+        }
+    })
+}
+
+export {doLogin, getSignCode, signUp, changeUserInfo, getUserCourse, loadUserCourse}

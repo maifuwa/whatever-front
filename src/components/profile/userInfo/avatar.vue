@@ -1,15 +1,15 @@
 <script setup>
 
 import {useAccountStore} from "@/store/useAccountStore";
-
 const avatarUrl = useAccountStore().user.avatarUrl
 
+// TODO: 添加修改头像
 </script>
 
 <template>
   <div class="avatar">
     <img :src="avatarUrl" alt="avatar">
-    <img src="../../../assets/images/icons/pen2.svg" alt="edit">
+    <img src="../../../assets/images/icons/pen2.svg" alt="edit" >
   </div>
 </template>
 

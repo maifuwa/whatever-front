@@ -1,23 +1,33 @@
 import {defineStore} from "pinia";
 import {computed, ref} from "vue";
+import {getUserCourse, loadUserCourse} from "@/api/userInfo";
 export const useCourseStore = defineStore('useCourseStore', () => {
     const schedules = ref([]);
+    const hasSchedules = ref(false);
 
-    const getCourse = async () => {
-        let response = await fetch('/static/courses.json');
-        let json = await response.json();
-        return json.data;
+    const getCourse = () => {
+       getUserCourse()
+           .then(res => {
+               if (res.code === 200) {
+                   schedules.value = res.data;
+                   hasSchedules.value = true;
+               }else {
+                   hasSchedules.value = false;
+               }
+           })
     }
 
-    const initCourse = async () => {
-        schedules.value = await getCourse();
-        // schedules.value = JSON.parse(tmp);
+    function loadCourse(password, course) {
+        loadUserCourse(password, course)
+            .then(res => {
+                if (res.code === 200) {
+                    schedules.value = res.data;
+                    hasSchedules.value = true;
+                }else {
+                    hasSchedules.value = false;
+                }
+            })
     }
-
-    const hasSchedules = computed(() => {
-        //TODO:判断用户有没有课表
-        return true;
-    });
 
     function weekCourse (weekNum) {
        return schedules.value
@@ -31,5 +41,5 @@ export const useCourseStore = defineStore('useCourseStore', () => {
         return weekCourse(weekNum).filter(s => s.day === day);
     }
 
-    return {initCourse, hasSchedules, weekCourse, dayCourse};
+    return {hasSchedules, getCourse, loadCourse, dayCourse};
 });

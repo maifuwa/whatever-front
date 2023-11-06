@@ -6,7 +6,7 @@ import {useCourseStore} from "@/store/useCourseStore";
 
 
 const courseStore = useCourseStore();
-onMounted(() => courseStore.initCourse());
+onMounted(() => courseStore.getCourse());
 </script>
 
 <template>
