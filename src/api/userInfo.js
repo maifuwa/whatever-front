@@ -51,7 +51,6 @@ function changeUserInfo(name, introduction) {
         url: '/api/auth/changeprofile',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
-            'Authorization': 'Bearer ' + useAccountStore().user.token
         },
         data: {
             name: name,
@@ -64,9 +63,6 @@ function getUserCourse() {
     return httpInstance({
         method: 'get',
         url: '/schedule/obtain',
-        headers: {
-            'Authorization': 'Bearer ' + useAccountStore().user.token
-        }
     })
 }
 
@@ -76,7 +72,6 @@ function loadUserCourse(password, course) {
         url: '/schedule/upload',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
-            'Authorization': 'Bearer ' + useAccountStore().user.token
         },
         data: {
             password: password,

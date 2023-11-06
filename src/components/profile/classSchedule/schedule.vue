@@ -11,8 +11,8 @@ onMounted(() => courseStore.getCourse());
 
 <template>
   <div class="schedule">
-    <course v-if="courseStore.hasSchedules" />
-    <upload-course v-else />
+    <upload-course v-if="courseStore.schedules === []" />
+    <course v-else />
   </div>
 </template>
 

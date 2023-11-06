@@ -7,9 +7,11 @@ const pageStore = usePageStore();
 const accountStore = useAccountStore();
 const changeLoginShow = inject('changeLoginShow');
 
-function login() {
+function profile() {
   if (!accountStore.isLogin) {
     changeLoginShow();
+  }else {
+    accountStore.logout();
   }
 }
 </script>
@@ -19,7 +21,7 @@ function login() {
     <h2>{{pageStore.guidesZh[pageStore.selected]}}</h2>
     <div class="userInfo">
       <div class="user">
-        <img :src="accountStore.user.avatarUrl" alt="header" @click="login">
+        <img :src="accountStore.user.avatarUrl" alt="header" @click="profile">
         {{accountStore.user.name}}
       </div>
       <img src="../../assets/images/icons/message.svg" alt="message">

@@ -3,16 +3,11 @@ import {computed, ref} from "vue";
 import {getUserCourse, loadUserCourse} from "@/api/userInfo";
 export const useCourseStore = defineStore('useCourseStore', () => {
     const schedules = ref([]);
-    const hasSchedules = ref(false);
-
     const getCourse = () => {
        getUserCourse()
            .then(res => {
                if (res.code === 200) {
                    schedules.value = res.data;
-                   hasSchedules.value = true;
-               }else {
-                   hasSchedules.value = false;
                }
            })
     }
@@ -22,9 +17,6 @@ export const useCourseStore = defineStore('useCourseStore', () => {
             .then(res => {
                 if (res.code === 200) {
                     schedules.value = res.data;
-                    hasSchedules.value = true;
-                }else {
-                    hasSchedules.value = false;
                 }
             })
     }
@@ -41,5 +33,11 @@ export const useCourseStore = defineStore('useCourseStore', () => {
         return weekCourse(weekNum).filter(s => s.day === day);
     }
 
-    return {hasSchedules, getCourse, loadCourse, dayCourse};
+    function clearCourse() {
+        schedules.value = [];
+    }
+
+    return {schedules, getCourse, loadCourse, dayCourse, clearCourse};
+}, {
+    persist: true,
 });

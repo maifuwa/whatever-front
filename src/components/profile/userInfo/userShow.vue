@@ -1,16 +1,17 @@
 <script setup>
 import {useAccountStore} from "@/store/useAccountStore";
+import {storeToRefs} from "pinia";
 
-const user = useAccountStore().user;
+const accountStore = useAccountStore();
 </script>
 
 <template>
   <div class="userShow">
     <div class="username">
-      {{user.name}}
+      {{accountStore.user.name}}
     </div>
     <div class="introduction">
-      {{user.introduction}}
+      {{accountStore.user.introduction}}
     </div>
 
     <div class="btn">

@@ -1,7 +1,10 @@
 import {defineStore} from "pinia";
 import {computed, ref} from "vue";
+import {useCourseStore} from "@/store/useCourseStore";
 
 export const useAccountStore = defineStore("useAccountStore", () => {
+    const courseStore = useCourseStore();
+
     const user = ref({
         token: '',
         name: 'guest',
@@ -21,10 +24,22 @@ export const useAccountStore = defineStore("useAccountStore", () => {
         user.value.introduction = introduction;
     }
 
+    function logout() {
+        user.value = {
+            token: '',
+            name: 'guest',
+            avatarUrl: 'http://127.0.0.1:8080/avatar/default_avatar.png',
+            introduction: '这个用户很懒，什么都没有写'
+        };
+        courseStore.clearCourse();
+    }
+
     const isLogin = computed(() => {
         return user.value.token !== '';
     })
 
-    return {user, changeUserInfo, isLogin, login};
+    return {user, changeUserInfo, isLogin, login, logout};
+}, {
+    persist: true,
 });
 
