@@ -5,10 +5,12 @@ import {useCourseStore} from "@/store/useCourseStore";
 export const useAccountStore = defineStore("useAccountStore", () => {
     const courseStore = useCourseStore();
 
+    const baseUrl = "http://127.0.0.1:8080";
+
     const user = ref({
         token: '',
         name: 'guest',
-        avatarUrl: 'http://127.0.0.1:8080/avatar/default_avatar.png',
+        avatarUrl:  baseUrl + '/images/avatar/default_avatar.png',
         introduction: '这个用户很懒，什么都没有写'
     });
 
@@ -20,7 +22,7 @@ export const useAccountStore = defineStore("useAccountStore", () => {
     function login(token, name, avatarUrl, introduction) {
         user.value.token = token;
         user.value.name = name;
-        user.value.avatarUrl = avatarUrl;
+        user.value.avatarUrl = baseUrl + avatarUrl;
         user.value.introduction = introduction;
     }
 
@@ -28,7 +30,7 @@ export const useAccountStore = defineStore("useAccountStore", () => {
         user.value = {
             token: '',
             name: 'guest',
-            avatarUrl: 'http://127.0.0.1:8080/avatar/default_avatar.png',
+            avatarUrl: baseUrl + '/images/avatar/default_avatar.png',
             introduction: '这个用户很懒，什么都没有写'
         };
         courseStore.clearCourse();
