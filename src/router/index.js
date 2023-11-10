@@ -14,22 +14,6 @@ const router = createRouter({
             path: '/profile',
             name: 'profile',
             component:() => import('../view/profile.vue'),
-            children: [
-                {
-                    path: '/nologin',
-                    name: 'noLogin',
-                    component: () => import('../components/profile/noLogin.vue')
-                },
-                {
-                    path: '/alreadyLog',
-                    name: 'alreadyLog',
-                    component: () => import('../components/profile/alreadyLog.vue')
-                },
-                {
-                    path: '*',
-                    redirect: '/noLogin'
-                }
-            ]
         },
         {
             path: '/developed',

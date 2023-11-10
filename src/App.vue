@@ -3,6 +3,7 @@ import {darkTheme, dateZhCN, zhCN} from "naive-ui";
 import Sidebar from "./components/overall/sidebar.vue";
 import Headlines from "./components/overall/headlines.vue";
 
+const collapsed = ref(false);
 </script>
 
 <template>
@@ -12,13 +13,14 @@ import Headlines from "./components/overall/headlines.vue";
         <!--侧边栏-->
         <n-layout-sider
             collapse-mode="width"
-            :collapsed-width="10"
-            :show-collapsed-content="false"
-            :show-trigger="'arrow-circle'"
-            :width="'10%'"
-            bordered
-            class="p-10">
-          <sidebar></sidebar>
+            :collapsed-width="80"
+            :width="200"
+            :collapsed="collapsed"
+            show-trigger
+            @collapse="collapsed = true"
+            @expand="collapsed = false"
+            bordered>
+          <sidebar :collapsed="collapsed"></sidebar>
         </n-layout-sider>
         <!--顶栏和内容-->
         <n-layout>
