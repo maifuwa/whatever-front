@@ -3,6 +3,7 @@ import { RouterLink } from "vue-router";
 import { h } from "vue";
 import { NIcon } from "naive-ui";
 import { SmartHome, Notebook, BrandDocker, Alien} from '@vicons/tabler'
+import {useUserStore} from "../../store/user";
 
 defineProps(["collapsed"])
 
@@ -10,18 +11,23 @@ function renderIcon(icon) {
   return () => h(NIcon, null, { default: () => h(icon)});
 }
 
+const userStore = useUserStore();
+const profilePath = computed(() => {
+  return userStore.isLogin ? '/profile/userInfo' : '/profile/nologin/login';
+});
+
 const menuOptions = [
   {
     label: () => h(
         RouterLink,
         {
           to: {
-            name: 'index',
+            path: '/',
           }
         },
         { default: () => '首页'}
     ),
-    key: 'index',
+    key: '1',
     icon: renderIcon(SmartHome)
   },
   {
@@ -29,12 +35,12 @@ const menuOptions = [
         RouterLink,
         {
           to: {
-            name: 'developed',
+            path: '/developed'
           }
         },
         { default: () => '文章'}
     ),
-    key: 'article',
+    key: '2',
     icon: renderIcon(Notebook)
   },
   {
@@ -42,12 +48,12 @@ const menuOptions = [
         RouterLink,
         {
           to: {
-            name: 'developed',
+            path: '/developed'
           }
         },
         { default: () => '社区'}
     ),
-    key: 'Community',
+    key: '3',
     icon: renderIcon(BrandDocker)
   },
   {
@@ -55,12 +61,12 @@ const menuOptions = [
         RouterLink,
         {
           to: {
-            name: 'profile',
+            path: profilePath.value
           }
         },
         { default: () => '个人信息'}
     ),
-    key: 'profile',
+    key: '4',
     icon: renderIcon(Alien)
   },
 
@@ -81,7 +87,8 @@ const menuOptions = [
         :collapsed="collapsed"
         :collapsed-width="80"
         :collapsed-icon-size="25"
-        default-value="index"
+        default-value="1"
+        class="text-xl"
     />
   </n-space>
 </template>

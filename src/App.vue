@@ -8,32 +8,34 @@ const collapsed = ref(false);
 
 <template>
   <n-config-provider :theme="darkTheme" :locale="zhCN" :date-locale="dateZhCN">
-    <n-space vertical size="large">
-      <n-layout has-sider style="width: 100vw;height: 100vh;">
-        <!--侧边栏-->
-        <n-layout-sider
-            collapse-mode="width"
-            :collapsed-width="80"
-            :width="200"
-            :collapsed="collapsed"
-            show-trigger
-            @collapse="collapsed = true"
-            @expand="collapsed = false"
-            bordered>
-          <sidebar :collapsed="collapsed"></sidebar>
-        </n-layout-sider>
-        <!--顶栏和内容-->
-        <n-layout>
-          <n-layout-header bordered>
-            <headlines></headlines>
-          </n-layout-header>
-          <n-layout-content>
-            <router-view></router-view>
-          </n-layout-content>
-        </n-layout>
+    <n-message-provider>
+      <n-space vertical size="large">
+        <n-layout has-sider style="width: 100vw;height: 100vh;">
+          <!--侧边栏-->
+          <n-layout-sider
+              collapse-mode="width"
+              :collapsed-width="80"
+              :width="200"
+              :collapsed="collapsed"
+              show-trigger
+              @collapse="collapsed = true"
+              @expand="collapsed = false"
+              bordered>
+            <sidebar :collapsed="collapsed"></sidebar>
+          </n-layout-sider>
+          <!--顶栏和内容-->
+          <n-layout>
+            <n-layout-header bordered>
+              <headlines></headlines>
+            </n-layout-header>
+            <n-layout-content >
+              <router-view></router-view>
+            </n-layout-content>
+          </n-layout>
 
-      </n-layout>
-    </n-space>
+        </n-layout>
+      </n-space>
+    </n-message-provider>
   </n-config-provider>
 </template>
 

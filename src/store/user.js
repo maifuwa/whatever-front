@@ -14,7 +14,10 @@ export const useUserStore = defineStore('user', () => {
     const isLogin = computed(() => userInfo.value.token !== '');
 
     function login(token, name, avatarUrl, introduction) {
-
+        userInfo.value.token = token;
+        userInfo.value.name = name;
+        userInfo.value.avatarUrl = avatarUrl;
+        userInfo.value.introduction = introduction;
     }
 
     function logout() {
@@ -29,7 +32,9 @@ export const useUserStore = defineStore('user', () => {
 
     return {
         userInfo,
-        isLogin
+        isLogin,
+        login,
+        logout
     }
 }, {
     persist: true

@@ -1,15 +1,15 @@
 <script setup>
 
 import {useUserStore} from "../store/user";
-import AlreadyLog from "../components/profile/alreadyLog.vue";
-import NoLogin from "../components/profile/noLogin.vue";
+import {useRoute, useRouter} from "vue-router";
 
 const userStore = useUserStore();
+const router = useRouter()
+
 </script>
 
 <template>
-  <already-log v-if="userStore.isLogin"></already-log>
-  <no-login v-else></no-login>
+  <router-view />
 </template>
 
 <style scoped>

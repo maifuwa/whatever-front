@@ -5,7 +5,10 @@ import {useRoute} from "vue-router";
 
 const router = useRoute();
 const userStore = useUserStore();
+
 const title = computed(() => {
+  console.log(router.path)
+
    switch (router.name) {
     case 'index':
       return '首页';
@@ -19,10 +22,10 @@ const title = computed(() => {
 </script>
 
 <template>
-  <n-space class="h-20 p-5" justify="space-between">
+  <n-space class="h-20 px-10 text-2xl" justify="space-between" align="center">
     <h2>{{title}}</h2>
     <n-space>
-      <n-space>
+      <n-space class="text-xl">
         <n-avatar
             :src="userStore.userInfo.avatarUrl"
             size="small"

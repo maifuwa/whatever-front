@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="text-lg">暂未开发，请以后再来</div>
+  <div>这里是注册</div>
 </template>
 
 <style scoped>

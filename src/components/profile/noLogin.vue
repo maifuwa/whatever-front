@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div>这里没有登陆</div>
+  <router-view />
 </template>
 
 <style scoped>
