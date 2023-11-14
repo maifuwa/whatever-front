@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="text-lg">暂未开发，请以后再来</div>
+  这是编辑文章分区
 </template>
 
 <style scoped>

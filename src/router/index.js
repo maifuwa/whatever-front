@@ -8,12 +8,12 @@ const router = createRouter({
         {
             path: '/',
             name: 'index',
-            component:() => import('../view/index.vue')
+            component: () => import('../view/index.vue')
         },
         {
             path: '/profile',
             name: 'profile',
-            component:() => import('../view/profile.vue'),
+            component: () => import('../view/profile.vue'),
             children: [
                 {
                     path: 'nologin',
@@ -36,10 +36,15 @@ const router = createRouter({
             ]
         },
         {
-            path: '/developed',
-            name: 'developed',
-            component:() => import('../view/developed.vue')
-        }
+            path: '/community',
+            name: 'community',
+            component: () => import('../view/community.vue')
+        },
+        {
+            path: '/article',
+            name: 'article',
+            component: () => import('../view/article.vue')
+        },
     ]
 
 })
